@@ -89,8 +89,40 @@
         width: 100%;
         position: absolute;
         top: 80px;
-        left: -100%;
-        opacity: 0;
+        /* left: -100%;
+        opacity: 0; */
         transition: all 0.5s ease;
+    }
+
+    #navbar-logo {
+        margin-left: 20px;
+    }
+
+    .nav-menu.active {
+        background: var(--darkgray);
+        left: 0;
+        opacity: 1;
+        transition: all 0.5s ease;
+    }
+
+    .nav-links {
+        text-align: center;
+        line-height: 60px;
+        width: 100%;
+        display: table;
+    }
+
+    .nav-links:hover {
+        background-color: var(--brightred);
+        color: var(--white);
+        transition: all 0.4s ease=ease-out;
+    }
+
+    .navbar {
+        width: 100%;
+    }
+
+    .nav-links-btn {
+        
     }
 }

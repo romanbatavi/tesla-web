@@ -1,0 +1,13 @@
+:root {
+    --darkgray: #212329
+    --brightred: #f94230
+    --white: #fff
+    --lightred: #f9433dcc
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+}

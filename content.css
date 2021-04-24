@@ -78,3 +78,18 @@
     height: 80%;
     width: 80%;
 }
+
+/* MOBILE RESPONSIVE */
+
+@media screen and (max-width: 760px) {
+    .main-container {
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+        justify-self: center;
+        width: 90%;
+        margin: 0 auto;
+        height: 90vh;
+        background-color: var(--darkgray);
+    }
+}

@@ -28,7 +28,7 @@ window.addEventListener('click', (e) => {
 
 //FORM VALIDATION
 const form = document.getElementById('form');
-const name = document.getElementById('name');
+const akuname = document.getElementById('name');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
 const passwordConfirm = document.getElementById('password-confirm');
@@ -41,3 +41,15 @@ function showError (input, message) {
     const errorMessage = formValidation.querySelector('p');
     errorMessage.innerText = message;
 }
+
+//CHECK REQUIRED FIELDS
+function checkRequired (inputArr) {
+    
+}
+
+// EVENT LISTENER
+form.addEventListener('submit',(e) => {
+    e.preventDefault();
+
+    checkRequired([akuname, email, password, passwordConfirm])
+})

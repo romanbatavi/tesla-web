@@ -42,10 +42,25 @@ function showError (input, message) {
     errorMessage.innerText = message;
 }
 
+//SHOW VALID MESSAGE
+function showValid(input) {
+    const formValidation = input.parentElement;
+    formValidation.className = 'form-validation valid'
+}
+
 //CHECK REQUIRED FIELDS
 function checkRequired (inputArr) {
-    
+    inputArr.forEach(function(input) {
+        if(input.value.trim() === '') {
+            showError(input, `${getFieldName(input)} is required`);
+        } else {
+            showValid(input);
+        }
+    })
 }
+
+//GET FIELDNAME
+function getFieldName
 
 // EVENT LISTENER
 form.addEventListener('submit',(e) => {

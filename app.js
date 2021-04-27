@@ -28,7 +28,7 @@ window.addEventListener('click', (e) => {
 
 //FORM VALIDATION
 const form = document.getElementById('form');
-const akuname = document.getElementById('name');
+const namee = document.getElementById('namee');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
 const passwordConfirm = document.getElementById('password-confirm');
@@ -59,12 +59,36 @@ function checkRequired (inputArr) {
     })
 }
 
+//CHECK INPUT LENGTH
+function checkLength(input, min, max) {
+    if(input.value.length < min) {
+        showError(input, `${getFieldName(input)} must be at least ${min} characters`)
+    } else if (input.value.length > max) {
+        showError(input, `${getFieldName(input)} must be at less ${max} characters`)
+    } else {
+        showValid(input);
+    }
+}
+
+//CHECK PASSWORD MATCH
+function passwrdMatch(input1, input2) {
+    if(input1.value !== input2.value) {
+        showValid(input2, 'Password do not Match')
+    }
+}
+
 //GET FIELDNAME
-function getFieldName
+function getFieldName(input) {
+    return input.namee.charAt(0).toUpperCase () + input.namee.slice(1);
+}
 
 // EVENT LISTENER
-form.addEventListener('submit',(e) => {
+form.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    checkRequired([akuname, email, password, passwordConfirm])
+    checkRequired([namee, email, password, passwordConfirm])
+    checkLength(namee, 3, 30);
+    checkLength(password, 8, 25);
+    checkLength(passwordConfirm, 8, 25);
+    passwrdMatch(passwordConfirm, passwordConfirm);
 })

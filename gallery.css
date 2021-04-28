@@ -1,0 +1,53 @@
+:root {
+    --darkgray: #212329;
+    --brightred: #f94230;
+    --white: #fff;
+    --lightred: #f9433dcc;
+    --lightblue: #337AF1;
+    --lightgray: #b1b1b1;
+}
+
+.services-section {
+    background-color: var(--darkgray);
+    width: 100vw;
+    height: auto;
+    min-height: 100vh;
+    padding-bottom: 8rem;
+}
+
+.services-heading {
+    color: var(--white);
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-top: 3rem;
+}
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    transform: translateY(80px);
+    padding: 0;
+    background-color: var(--darkgray);
+    height: auto;
+}
+
+.services-cell {
+    flex: 0 1 250px;
+    max-width: 250px;
+    height: 275px;
+    margin: 2px 2px;
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 8);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    cursor: pointer;
+}
+
+.services-cell_img {
+    
+}

@@ -168,3 +168,18 @@
         margin: 50px 25px;
     }
 }
+
+/* POPUP WINDOW WHEN CLICK */
+.img-window {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
